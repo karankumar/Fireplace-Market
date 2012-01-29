@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fireplace</string>
+    <string-array name="Category">
+        <item >Development</item>
+        <item >Network</item>
+        <item >System</item>
+        <item >Security</item>
+        <item >Permissions</item>
+    </string-array>
+    <string name="up_one_level">..</string>
+    <string name="current_dir">.</string>
+    <string name="version">2.0 RC</string>
+    <string name="updateTo">1.8</string>
+    <string name="info_changelog">
+        Fireplace Market 2.0
+        \n\n- New way to download apps
+        \n- Added categories
+        \n- Added menu buttons
+        \n- Icons
+        \n- New launcher icon
+        \n- Search works
+        \n- Repositories
+        \n- Install/uninstall apps</string>    
+</resources>

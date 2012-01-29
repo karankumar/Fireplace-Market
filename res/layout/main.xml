@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txtDeviceInfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Model- OS" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.94" >
+
+                        <Button
+                            android:id="@+id/btnTwitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80.0dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="14dp"
+                            android:text="Twitter" 
+                            android:drawableLeft="@drawable/twitter_icon" />
+
+                        <Button
+                            android:id="@+id/btnFacebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80.0dip"
+                            android:layout_alignBaseline="@+id/btnTwitter"
+                            android:layout_alignBottom="@+id/btnTwitter"
+                            android:layout_alignParentRight="true"
+                            android:text="Facebook" 
+                            android:drawableLeft="@drawable/facebook_icon" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+
+                    <Button
+                        android:id="@+id/btnViewAll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="All Applications" />
+                    
+                    <ListView
+                        android:id="@android:id/list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="132dp"
+                        android:layout_weight="0.58" >
+                    </ListView>
+                    
+                    
+
+                    
+                </LinearLayout>        
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                    
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.71" >
+
+
+                        <Button
+                            android:id="@+id/btnRepo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:text="Repository" 
+                            android:drawableLeft="@drawable/repo_icon"/>
+
+
+                        <Button
+                            android:id="@+id/btnPack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/btnRepo"
+                            android:text="Packages" 
+                            android:scaleType="center"
+                            android:drawableLeft="@drawable/storage_icon" />
+
+                        
+                        <Button
+                            android:id="@+id/btnStorage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/btnPack"
+                            android:text="Storage" 
+                            android:drawableLeft="@drawable/packages_icon"/>
+
+                    </RelativeLayout>
+                   
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                    
+                    <AutoCompleteTextView
+                            android:id="@+id/autoCompleteTextView1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" 
+                          	android:singleLine="true"
+                            />
+                    
+                    
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

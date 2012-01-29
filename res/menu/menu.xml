@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/textDonate"
+        android:icon="@drawable/ic_menu_love" 
+        android:title="Donate"/>
+    <item android:id="@+id/textAbout"
+        android:title="About"
+        android:icon="@drawable/ic_menu_sun" />
+    <item android:id="@+id/textCheckUpdate"
+        android:title="Update"
+        android:icon="@drawable/ic_menu_globe" />
+</menu>
