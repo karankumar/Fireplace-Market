@@ -57,7 +57,8 @@ public class GetContentFromDBActivity extends Activity {
     
     void LoadData(){
 
-        //TextView v = (TextView)findViewById(R.id.txtStatusError); 
+        //TextView v = (TextView)findViewById(R.id.txtStatusError);
+    	
         try {
 
             HttpClient httpClient = new DefaultHttpClient();
