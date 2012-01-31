@@ -65,6 +65,23 @@
                             android:text="Facebook" 
                             android:drawableLeft="@drawable/facebook_icon" />
 
+                        <ProgressBar
+                            android:id="@+id/progressBar1"
+                            style="?android:attr/progressBarStyleLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <TextView
+                            android:id="@+id/txtLoading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/progressBar1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="34dp"
+                            android:text="Under developing" />
+
                     </RelativeLayout>
                 </LinearLayout>
 

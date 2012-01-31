@@ -14,10 +14,11 @@
     <string name="updateTo">1.8</string>
     <string name="info_changelog">
         Fireplace Market 2.0
-        \n\n- New way to download apps
+        \n- No root on startup
+        \n- New way to download apps
         \n- Added categories
         \n- Added menu buttons
-        \n- Icons
+        \n- New icons
         \n- New launcher icon
         \n- Search works
         \n- Repositories

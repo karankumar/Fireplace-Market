@@ -2,7 +2,6 @@ package com.fireplace.software;
 
 
 
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -32,6 +31,7 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
@@ -107,6 +107,9 @@ public class FireplaceActivity extends ListActivity implements OnClickListener
         ts.setIndicator("Search");
         th.addTab(ts);
         
+        TextView txtLoading = (TextView) findViewById (R.id.txtLoading);
+        txtLoading.setText("Setting up components"); //Initial loading
+        
         Button btnRepo = (Button) findViewById (R.id.btnRepo);
         btnRepo.setOnClickListener(this);
         
@@ -119,9 +122,17 @@ public class FireplaceActivity extends ListActivity implements OnClickListener
         Button btnViewAll = (Button) findViewById (R.id.btnViewAll);
         btnViewAll.setOnClickListener(this);
         
+        Button btnFacebook = (Button) findViewById (R.id.btnFacebook);
+        btnFacebook.setOnClickListener(this);
+        
+        Button btnTwitter = (Button) findViewById(R.id.btnTwitter);
+        btnTwitter.setOnClickListener(this);
+        
         TextView txtDeviceInfo = (TextView) findViewById (R.id.txtDeviceInfo);
         txtDeviceInfo.setText("Android: " + android.os.Build.VERSION.RELEASE + "/ Device: " + android.os.Build.DEVICE);
 
+        txtLoading.setText("Runnning network check");
+        
         startupNetworkCheck();
         
       //Should be firstTimeRun in string in strings.xml
@@ -142,44 +153,16 @@ public class FireplaceActivity extends ListActivity implements OnClickListener
             // show it
             alertbox.show();
         }
-        else {
-        	Toast.makeText(this, "Not Equal", Toast.LENGTH_SHORT).show(); 
-        }
         
      // create a dir
+        txtLoading.setText("Loading folders");
+        
         File fireplaceDir = new File("/sdcard/Fireplace/");
         fireplaceDir.mkdirs();
         
-        Process p;  
-        try {  
-           // Preform su to get root privledges  
-           p = Runtime.getRuntime().exec("su");   
-          
-           // Attempt to write a file to a root-only  
-           DataOutputStream os = new DataOutputStream(p.getOutputStream());  
-           os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");  
-          
-           // Close the terminal  
-           os.writeBytes("exit\n");  
-           os.flush();  
-           try {  
-              p.waitFor();  
-                   if (p.exitValue() != 255) {  
-                      // TODO Code to run on success  
-                	   
-                   }  
-                   else {  
-                       // TODO Code to run on unsuccessful  
-                	   Toast.makeText(this, "You need a rooted phone!", Toast.LENGTH_SHORT).show(); 
-                   }  
-           } catch (InterruptedException e) {  
-              // TODO Code to run in interrupted exception  
-        	   Toast.makeText(this, "You need a rooted phone!", Toast.LENGTH_SHORT).show(); 
-           }  
-        } catch (IOException e) {  
-           // TODO Code to run in input/output exception  
-            Toast.makeText(this, "You need a rooted phone!", Toast.LENGTH_SHORT).show();
-        }  
+        txtLoading.setText("All done!");
+        
+        
     }
         
     
@@ -206,8 +189,7 @@ public class FireplaceActivity extends ListActivity implements OnClickListener
             	AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
             	alertbox.setTitle("About Fireplace Market");
                 alertbox.setMessage("Fireplace Market is a 3rd party app store which contain apps and tweaks which didn't get into Android Market" +
-                		"\n" +
-                		"\nThis software comes without any kind of warranty!" +
+                		"\n\nThis software comes without any kind of warranty!" +
                 		"\n\nProject started by Spxc" +
                 		"\n\nCopyright 2012" +
                 		"\nRooted Dev Team");
@@ -299,6 +281,25 @@ public class FireplaceActivity extends ListActivity implements OnClickListener
 
     public void onClick(View v) {
     	switch(v.getId()) {    	
+    	
+    	case R.id.btnTwitter: //Twitter button
+    		Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("http://twitter.com/#!/Spxc") );
+			startActivity( browse );
+			break;
+			
+    	case R.id.btnFacebook: //Facebook Buttin
+    		AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
+        	alertbox.setTitle("Sorry");
+            alertbox.setMessage("We don't have a support group on facebook, yet! Check back later.");
+            alertbox.setNeutralButton("I'll wait", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface arg0, int arg1) {
+                    //Edit string firstTimeRun in strings.xml
+                }
+            });
+ 
+            // show it
+            alertbox.show();
+    		break;
     	
     	case R.id.btnRepo: //Repository button
     		//Show repo's
