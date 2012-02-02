@@ -1,0 +1,339 @@
+[33mcommit 9a9c7e8570fda259565f920071b4a890b0c8fa6f[m
+Author: unknown <Karan@SYS_M61.(none)>
+Date:   Tue Jan 31 14:44:16 2012 +0530
+
+    Stian's Code
+
+[1mdiff --git a/README b/README[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/bin/Fireplace.apk b/bin/Fireplace.apk[m
+[1mindex 47052f1..f33272b 100644[m
+Binary files a/bin/Fireplace.apk and b/bin/Fireplace.apk differ
+[1mdiff --git a/bin/classes.dex b/bin/classes.dex[m
+[1mindex 82a88bb..eba9d57 100644[m
+Binary files a/bin/classes.dex and b/bin/classes.dex differ
+[1mdiff --git a/bin/classes/com/fireplace/software/FireplaceActivity$1.class b/bin/classes/com/fireplace/software/FireplaceActivity$1.class[m
+[1mindex 05cc15e..a3ca8b9 100644[m
+Binary files a/bin/classes/com/fireplace/software/FireplaceActivity$1.class and b/bin/classes/com/fireplace/software/FireplaceActivity$1.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/FireplaceActivity$2.class b/bin/classes/com/fireplace/software/FireplaceActivity$2.class[m
+[1mindex 327b9cb..6ff912e 100644[m
+Binary files a/bin/classes/com/fireplace/software/FireplaceActivity$2.class and b/bin/classes/com/fireplace/software/FireplaceActivity$2.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/FireplaceActivity.class b/bin/classes/com/fireplace/software/FireplaceActivity.class[m
+[1mindex 900cea9..f18e6b6 100644[m
+Binary files a/bin/classes/com/fireplace/software/FireplaceActivity.class and b/bin/classes/com/fireplace/software/FireplaceActivity.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/GetContentFromDBActivity$1.class b/bin/classes/com/fireplace/software/GetContentFromDBActivity$1.class[m
+[1mindex 4e4420e..e972019 100644[m
+Binary files a/bin/classes/com/fireplace/software/GetContentFromDBActivity$1.class and b/bin/classes/com/fireplace/software/GetContentFromDBActivity$1.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/GetContentFromDBActivity$2.class b/bin/classes/com/fireplace/software/GetContentFromDBActivity$2.class[m
+[1mindex 8c6481e..dac050a 100644[m
+Binary files a/bin/classes/com/fireplace/software/GetContentFromDBActivity$2.class and b/bin/classes/com/fireplace/software/GetContentFromDBActivity$2.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/GetContentFromDBActivity.class b/bin/classes/com/fireplace/software/GetContentFromDBActivity.class[m
+[1mindex dd4c692..c62f902 100644[m
+Binary files a/bin/classes/com/fireplace/software/GetContentFromDBActivity.class and b/bin/classes/com/fireplace/software/GetContentFromDBActivity.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/R$id.class b/bin/classes/com/fireplace/software/R$id.class[m
+[1mindex 61fa848..9f09f38 100644[m
+Binary files a/bin/classes/com/fireplace/software/R$id.class and b/bin/classes/com/fireplace/software/R$id.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/R$layout.class b/bin/classes/com/fireplace/software/R$layout.class[m
+[1mindex 2811823..c096a2a 100644[m
+Binary files a/bin/classes/com/fireplace/software/R$layout.class and b/bin/classes/com/fireplace/software/R$layout.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/R$menu.class b/bin/classes/com/fireplace/software/R$menu.class[m
+[1mindex 3e6c025..ed257ae 100644[m
+Binary files a/bin/classes/com/fireplace/software/R$menu.class and b/bin/classes/com/fireplace/software/R$menu.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/R$string.class b/bin/classes/com/fireplace/software/R$string.class[m
+[1mindex 9ab857e..18d8a07 100644[m
+Binary files a/bin/classes/com/fireplace/software/R$string.class and b/bin/classes/com/fireplace/software/R$string.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/RepoActivity.class b/bin/classes/com/fireplace/software/RepoActivity.class[m
+[1mindex d055417..7c01e6c 100644[m
+Binary files a/bin/classes/com/fireplace/software/RepoActivity.class and b/bin/classes/com/fireplace/software/RepoActivity.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/StorageActivity.class b/bin/classes/com/fireplace/software/StorageActivity.class[m
+[1mindex 04db5cc..e0ba588 100644[m
+Binary files a/bin/classes/com/fireplace/software/StorageActivity.class and b/bin/classes/com/fireplace/software/StorageActivity.class differ
+[1mdiff --git a/bin/classes/com/fireplace/software/ViewAllAppsActivity.class b/bin/classes/com/fireplace/software/ViewAllAppsActivity.class[m
+[1mindex 1529d66..2d8c001 100644[m
+Binary files a/bin/classes/com/fireplace/software/ViewAllAppsActivity.class and b/bin/classes/com/fireplace/software/ViewAllAppsActivity.class differ
+[1mdiff --git a/bin/resources.ap_ b/bin/resources.ap_[m
+[1mindex 07c1082..a50fbdb 100644[m
+Binary files a/bin/resources.ap_ and b/bin/resources.ap_ differ
+[1mdiff --git a/gen/com/fireplace/software/R.java b/gen/com/fireplace/software/R.java[m
+[1mindex 1ee7b61..87371e9 100644[m
+[1m--- a/gen/com/fireplace/software/R.java[m
+[1m+++ b/gen/com/fireplace/software/R.java[m
+[36m@@ -35,27 +35,27 @@[m [mpublic final class R {[m
+     public static final class id {[m
+         public static final int TextView01=0x7f070007;[m
+         public static final int TextView02=0x7f070008;[m
+[31m-        public static final int addBtn=0x7f070020;[m
+[32m+[m[32m        public static final int addBtn=0x7f070022;[m
+         public static final int appicon=0x7f070009;[m
+         public static final int apptitle=0x7f07000a;[m
+[31m-        public static final int autoCompleteTextView1=0x7f07001a;[m
+[32m+[m[32m        public static final int autoCompleteTextView1=0x7f07001c;[m
+         public static final int btnDownload=0x7f070005;[m
+         public static final int btnFacebook=0x7f070012;[m
+[31m-        public static final int btnPack=0x7f070017;[m
+[31m-        public static final int btnRepo=0x7f070016;[m
+[31m-        public static final int btnStorage=0x7f070018;[m
+[32m+[m[32m        public static final int btnPack=0x7f070019;[m
+[32m+[m[32m        public static final int btnRepo=0x7f070018;[m
+[32m+[m[32m        public static final int btnStorage=0x7f07001a;[m
+         public static final int btnTwitter=0x7f070011;[m
+[31m-        public static final int btnViewAll=0x7f070014;[m
+[31m-        public static final int button1=0x7f07001d;[m
+[31m-        public static final int infoCredits=0x7f07002a;[m
+[31m-        public static final int infoDevice=0x7f070026;[m
+[31m-        public static final int infoFireplace=0x7f070029;[m
+[31m-        public static final int infoModel=0x7f070025;[m
+[31m-        public static final int infoOS=0x7f070027;[m
+[31m-        public static final int infoStorage=0x7f070024;[m
+[31m-        public static final int infoTeam=0x7f07002b;[m
+[31m-        public static final int item_subtitle=0x7f07001f;[m
+[31m-        public static final int item_title=0x7f07001e;[m
+[32m+[m[32m        public static final int btnViewAll=0x7f070016;[m
+[32m+[m[32m        public static final int button1=0x7f07001f;[m
+[32m+[m[32m        public static final int infoCredits=0x7f07002c;[m
+[32m+[m[32m        public static final int infoDevice=0x7f070028;[m
+[32m+[m[32m        public static final int infoFireplace=0x7f07002b;[m
+[32m+[m[32m        public static final int infoModel=0x7f070027;[m
+[32m+[m[32m        public static final int infoOS=0x7f070029;[m
+[32m+[m[32m        public static final int infoStorage=0x7f070026;[m
+[32m+[m[32m        public static final int infoTeam=0x7f07002d;[m
+[32m+[m[32m        public static final int item_subtitle=0x7f070021;[m
+[32m+[m[32m        public static final int item_title=0x7f070020;[m
+         public static final int lbAppTitle=0x7f070002;[m
+         public static final int lbDeveloper=0x7f070006;[m
+         public static final int lbInfo=0x7f070004;[m
+[36m@@ -63,23 +63,25 @@[m [mpublic final class R {[m
+         public static final int linearLayout1=0x7f07000d;[m
+         public static final int listView1=0x7f070001;[m
+         public static final int lwApps=0x7f07000b;[m
+[32m+[m[32m        public static final int progressBar1=0x7f070013;[m
+         public static final int relativeLayout1=0x7f070000;[m
+         public static final int relativeLayout2=0x7f070010;[m
+         public static final int tab1=0x7f07000e;[m
+[31m-        public static final int tab2=0x7f070015;[m
+[31m-        public static final int tab3=0x7f070013;[m
+[31m-        public static final int tab4=0x7f070019;[m
+[32m+[m[32m        public static final int tab2=0x7f070017;[m
+[32m+[m[32m        public static final int tab3=0x7f070015;[m
+[32m+[m[32m        public static final int tab4=0x7f07001b;[m
+         public static final int tabhost=0x7f07000c;[m
+[31m-        public static final int textAbout=0x7f07002d;[m
+[31m-        public static final int textCheckUpdate=0x7f07002e;[m
+[31m-        public static final int textDonate=0x7f07002c;[m
+[31m-        public static final int textView1=0x7f07001c;[m
+[31m-        public static final int textView2=0x7f07001b;[m
+[31m-        public static final int textView3=0x7f070022;[m
+[31m-        public static final int textView4=0x7f070023;[m
+[31m-        public static final int textView5=0x7f070028;[m
+[31m-        public static final int txtAddRepo=0x7f070021;[m
+[32m+[m[32m        public static final int textAbout=0x7f07002f;[m
+[32m+[m[32m        public static final int textCheckUpdate=0x7f070030;[m
+[32m+[m[32m        public static final int textDonate=0x7f07002e;[m
+[32m+[m[32m        public static final int textView1=0x7f07001e;[m
+[32m+[m[32m        public static final int textView2=0x7f07001d;[m
+[32m+[m[32m        public static final int textView3=0x7f070024;[m
+[32m+[m[32m        public static final int textView4=0x7f070025;[m
+[32m+[m[32m        public static final int textView5=0x7f07002a;[m
+[32m+[m[32m        public static final int txtAddRepo=0x7f070023;[m
+         public static final int txtDeviceInfo=0x7f07000f;[m
+[32m+[m[32m        public static final int txtLoading=0x7f070014;[m
+     }[m
+     public static final class layout {[m
+         public static final int browse=0x7f030000;[m
+[1mdiff --git a/res/layout/main.xml b/res/layout/main.xml[m
+[1mindex 92d3bfb..93f08c5 100644[m
+[1m--- a/res/layout/main.xml[m
+[1m+++ b/res/layout/main.xml[m
+[36m@@ -63,7 +63,24 @@[m
+                             android:layout_alignBottom="@+id/btnTwitter"[m
+                             android:layout_alignParentRight="true"[m
+                             android:text="Facebook" [m
+[31m-                            android:drawableLeft="@drawable/facebook_icon" />[m
+[32m+[m[32m                            android:drawableLeft="@drawable/facebook_icon" />[m
+[32m+[m[41m[m
+[32m+[m[32m                        <ProgressBar[m[41m[m
+[32m+[m[32m                            android:id="@+id/progressBar1"[m[41m[m
+[32m+[m[32m                            style="?android:attr/progressBarStyleLarge"[m[41m[m
+[32m+[m[32m                            android:layout_width="wrap_content"[m[41m[m
+[32m+[m[32m                            android:layout_height="wrap_content"[m[41m[m
+[32m+[m[32m                            android:layout_centerHorizontal="true"[m[41m[m
+[32m+[m[32m                            android:layout_centerVertical="true" />[m
+[32m+[m[41m[m
+[32m+[m[32m                        <TextView[m[41m[m
+[32m+[m[32m                            android:id="@+id/txtLoading"[m[41m[m
+[32m+[m[32m                            android:layout_width="wrap_content"[m[41m[m
+[32m+[m[32m                            android:layout_height="wrap_content"[m[41m[m
+[32m+[m[32m                            android:layout_below="@+id/progressBar1"[m[41m[m
+[32m+[m[32m                            android:layout_centerHorizontal="true"[m[41m[m
+[32m+[m[32m                            android:layout_marginTop="34dp"[m[41m[m
+[32m+[m[32m                            android:text="Under developing" />[m[41m[m
+ [m
+                     </RelativeLayout>[m
+                 </LinearLayout>[m
+[1mdiff --git a/res/values/strings.xml b/res/values/strings.xml[m
+[1mindex 6dad6a7..014535c 100644[m
+[1m--- a/res/values/strings.xml[m
+[1m+++ b/res/values/strings.xml[m
+[36m@@ -14,10 +14,11 @@[m
+     <string name="updateTo">1.8</string>[m
+     <string name="info_changelog">[m
+         Fireplace Market 2.0[m
+[31m-        \n\n- New way to download apps[m
+[32m+[m[32m        \n- No root on startup[m
+[32m+[m[32m        \n- New way to download apps[m
+         \n- Added categories[m
+         \n- Added menu buttons[m
+[31m-        \n- Icons[m
+[32m+[m[32m        \n- New icons[m
+         \n- New launcher icon[m
+         \n- Search works[m
+         \n- Repositories[m
+[1mdiff --git a/src/com/fireplace/software/FireplaceActivity.java b/src/com/fireplace/software/FireplaceActivity.java[m
+[1mindex dc877cd..d62f6fb 100644[m
+[1m--- a/src/com/fireplace/software/FireplaceActivity.java[m
+[1m+++ b/src/com/fireplace/software/FireplaceActivity.java[m
+[36m@@ -2,7 +2,6 @@[m [mpackage com.fireplace.software;[m
+ [m
+ [m
+ [m
+[31m-import java.io.DataOutputStream;[m
+ import java.io.File;[m
+ import java.io.FileOutputStream;[m
+ import java.io.IOException;[m
+[36m@@ -32,6 +31,7 @@[m [mimport android.view.Window;[m
+ import android.view.View.OnClickListener;[m
+ import android.widget.ArrayAdapter;[m
+ import android.widget.Button;[m
+[32m+[m[32mimport android.widget.ImageView;[m
+ import android.widget.TabHost;[m
+ import android.widget.Toast;[m
+ import android.widget.TabHost.TabSpec;[m
+[36m@@ -107,6 +107,9 @@[m [mpublic class FireplaceActivity extends ListActivity implements OnClickListener[m
+         ts.setIndicator("Search");[m
+         th.addTab(ts);[m
+         [m
+[32m+[m[32m        TextView txtLoading = (TextView) findViewById (R.id.txtLoading);[m
+[32m+[m[32m        txtLoading.setText("Setting up components"); //Initial loading[m
+[32m+[m[41m        [m
+         Button btnRepo = (Button) findViewById (R.id.btnRepo);[m
+         btnRepo.setOnClickListener(this);[m
+         [m
+[36m@@ -119,9 +122,17 @@[m [mpublic class FireplaceActivity extends ListActivity implements OnClickListener[m
+         Button btnViewAll = (Button) findViewById (R.id.btnViewAll);[m
+         btnViewAll.setOnClickListener(this);[m
+         [m
+[32m+[m[32m        Button btnFacebook = (Button) findViewById (R.id.btnFacebook);[m
+[32m+[m[32m        btnFacebook.setOnClickListener(this);[m
+[32m+[m[41m        [m
+[32m+[m[32m        Button btnTwitter = (Button) findViewById(R.id.btnTwitter);[m
+[32m+[m[32m        btnTwitter.setOnClickListener(this);[m
+[32m+[m[41m        [m
+         TextView txtDeviceInfo = (TextView) findViewById (R.id.txtDeviceInfo);[m
+         txtDeviceInfo.setText("Android: " + android.os.Build.VERSION.RELEASE + "/ Device: " + android.os.Build.DEVICE);[m
+ [m
+[32m+[m[32m        txtLoading.setText("Runnning network check");[m
+[32m+[m[41m        [m
+         startupNetworkCheck();[m
+         [m
+       //Should be firstTimeRun in string in strings.xml[m
+[36m@@ -142,44 +153,16 @@[m [mpublic class FireplaceActivity extends ListActivity implements OnClickListener[m
+             // show it[m
+             alertbox.show();[m
+         }[m
+[31m-        else {[m
+[31m-        	Toast.makeText(this, "Not Equal", Toast.LENGTH_SHORT).show(); [m
+[31m-        }[m
+         [m
+      // create a dir[m
+[32m+[m[32m        txtLoading.setText("Loading folders");[m
+[32m+[m[41m        [m
+         File fireplaceDir = new File("/sdcard/Fireplace/");[m
+         fireplaceDir.mkdirs();[m
+         [m
+[31m-        Process p;  [m
+[31m-        try {  [m
+[31m-           // Preform su to get root privledges  [m
+[31m-           p = Runtime.getRuntime().exec("su");   [m
+[31m-          [m
+[31m-           // Attempt to write a file to a root-only  [m
+[31m-           DataOutputStream os = new DataOutputStream(p.getOutputStream());  [m
+[31m-           os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");  [m
+[31m-          [m
+[31m-           // Close the terminal  [m
+[31m-           os.writeBytes("exit\n");  [m
+[31m-           os.flush();  [m
+[31m-           try {  [m
+[31m-              p.waitFor();  [m
+[31m-                   if (p.exitValue() != 255) {  [m
+[31m-                      // TODO Code to run on success  [m
+[31m-                	   [m
+[31m-                   }  [m
+[31m-                   else {  [m
+[31m-                       // TODO Code to run on unsuccessful  [m
+[31m-                	   Toast.makeText(this, "You need a rooted phone!", Toast.LENGTH_SHORT).show(); [m
+[31m-                   }  [m
+[31m-           } catch (InterruptedException e) {  [m
+[31m-              // TODO Code to run in interrupted exception  [m
+[31m-        	   Toast.makeText(this, "You need a rooted phone!", Toast.LENGTH_SHORT).show(); [m
+[31m-           }  [m
+[31m-        } catch (IOException e) {  [m
+[31m-           // TODO Code to run in input/output exception  [m
+[31m-            Toast.makeText(this, "You need a rooted phone!", Toast.LENGTH_SHORT).show();[m
+[31m-        }  [m
+[32m+[m[32m        txtLoading.setText("All done!");[m
+[32m+[m[41m        [m
+[32m+[m[41m        [m
+     }[m
+         [m
+     [m
+[36m@@ -206,8 +189,7 @@[m [mpublic class FireplaceActivity extends ListActivity implements OnClickListener[m
+             	AlertDialog.Builder alertbox = new AlertDialog.Builder(this);[m
+             	alertbox.setTitle("About Fireplace Market");[m
+                 alertbox.setMessage("Fireplace Market is a 3rd party app store which contain apps and tweaks which didn't get into Android Market" +[m
+[31m-                		"\n" +[m
+[31m-                		"\nThis software comes without any kind of warranty!" +[m
+[32m+[m[41m                [m		[32m"\n\nThis software comes without any kind of warranty!" +[m
+                 		"\n\nProject started by Spxc" +[m
+                 		"\n\nCopyright 2012" +[m
+                 		"\nRooted Dev Team");[m
+[36m@@ -300,6 +282,25 @@[m [mpublic class FireplaceActivity extends ListActivity implements OnClickListener[m
+     public void onClick(View v) {[m
+     	switch(v.getId()) {    	[m
+     	[m
+[32m+[m[41m    [m	[32mcase R.id.btnTwitter: //Twitter button[m
+[32m+[m[41m    [m		[32mIntent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("http://twitter.com/#!/Spxc") );[m
+[32m+[m			[32mstartActivity( browse );[m
+[32m+[m			[32mbreak;[m
+[32m+[m[41m			[m
+[32m+[m[41m    [m	[32mcase R.id.btnFacebook: //Facebook Buttin[m
+[32m+[m[41m    [m		[32mAlertDialog.Builder alertbox = new AlertDialog.Builder(this);[m
+[32m+[m[41m        [m	[32malertbox.setTitle("Sorry");[m
+[32m+[m[32m            alertbox.setMessage("We don't have a support group on facebook, yet! Check back later.");[m
+[32m+[m[32m            alertbox.setNeutralButton("I'll wait", new DialogInterface.OnClickListener() {[m
+[32m+[m[32m                public void onClick(DialogInterface arg0, int arg1) {[m
+[32m+[m[32m                    //Edit string firstTimeRun in strings.xml[m
+[32m+[m[32m                }[m
+[32m+[m[32m            });[m
+[32m+[m[41m [m
+[32m+[m[32m            // show it[m
+[32m+[m[32m            alertbox.show();[m
+[32m+[m[41m    [m		[32mbreak;[m
+[32m+[m[41m    	[m
+     	case R.id.btnRepo: //Repository button[m
+     		//Show repo's[m
+     		final Context contextRepo = this;[m
+[1mdiff --git a/src/com/fireplace/software/GetContentFromDBActivity.java b/src/com/fireplace/software/GetContentFromDBActivity.java[m
+[1mindex 94e6dd5..e045db4 100644[m
+[1m--- a/src/com/fireplace/software/GetContentFromDBActivity.java[m
+[1m+++ b/src/com/fireplace/software/GetContentFromDBActivity.java[m
+[36m@@ -57,8 +57,7 @@[m [mpublic class GetContentFromDBActivity extends Activity {[m
+     [m
+     void LoadData(){[m
+ [m
+[31m-        //TextView v = (TextView)findViewById(R.id.txtStatusError);[m
+[31m-    	[m
+[32m+[m[32m        //TextView v = (TextView)findViewById(R.id.txtStatusError);[m[41m [m
+         try {[m
+ [m
+             HttpClient httpClient = new DefaultHttpClient();[m
